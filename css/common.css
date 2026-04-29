@@ -1,5 +1,6 @@
 @import url('normalize.css');
 @import url('reset.css');
+@import url('flex-utility.css');
 
 :root{
   /* Layout */
@@ -115,4 +116,12 @@ form button{
   font-size: calc(var(--base-font) * 0.125);
   text-transform: uppercase;
   font-weight: bold;
+}
+/* 레이아웃 */
+.container{
+  width: 1272px;
+  margin:0 auto;
+}
+.inner-pd{
+  padding: calc(var(--base-unit) * 3) 0;
 }
