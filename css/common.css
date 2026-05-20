@@ -35,8 +35,8 @@
 
 body {
   /* font-family: "Open Sans", sans-serif;
-  font-size: var(--base-font);
-  line-height: var(--base-unit); */
+  font-size:var(--base-font);
+  line-height:var(--base-unit); */
   font:
     var(--base-font)/var(--base-unit) "Open Sans",
     sans-serif;
@@ -50,20 +50,24 @@ body {
   text-transform: uppercase;
   letter-spacing: 2%;
 }
+
 .text-heading-s {
   font-size: var(--heading--s);
   line-height: var(--base-unit);
 }
+
 .text-body-l {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
   font-weight: 300;
   text-align: center;
 }
+
 .text-body-m {
   font-size: var(--body--m);
   line-height: var(--base-unit);
 }
+
 .text-body-m-plus {
   font-size: var(--body--m-plus);
   line-height: var(--base-unit);
@@ -75,7 +79,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 /* 링크 버튼 */
 .btn {
   height: 39px;
@@ -90,8 +93,11 @@ body {
   gap: 5px;
   text-transform: uppercase;
 }
+.btn .material-icons {
+  font-size: 14px;
+}
 .btn-primary {
-  background-color: var(--primary);
+  background: var(--primary);
   color: var(--secondary);
 }
 .btn.big {
@@ -135,7 +141,6 @@ form .field input::placeholder {
 }
 form button {
   height: calc(var(--base-unit) * 2);
-  border: 1px var(--white) solid;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -144,13 +149,12 @@ form button {
   font-size: calc(var(--base-font) * 1.125);
   text-transform: uppercase;
   font-weight: bold;
-}
-.btn .material-icons {
-  font-size: 14px;
+  border: 1px solid var(--white);
 }
 /* 레이아웃 */
 .container {
-  width: 1272px;
+  max-width: 1272px;
+  width: 100%;
   margin: 0 auto;
 }
 .inner-pd {
@@ -166,12 +170,14 @@ form button {
   height: 1px;
   overflow: hidden;
 }
+
 hr {
   border: none;
-  /* border-top: 1px solid var(--super--light--gray); */
+  /* border-top:1px solid var(--super--light--gray); */
   height: 1px;
   background: var(--super--light--gray);
 }
+
 .text-link {
   text-decoration: underline;
   color: var(--primary);
@@ -185,7 +191,15 @@ body > header {
   background: var(--white);
   padding: var(--base-unit) 0;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  transition: 0.3s ease-out;
 }
+
+body > header.fixed {
+  padding: calc(var(--base-unit) / 2) 0;
+}
+
 header nav ul {
   gap: 10px;
 }
@@ -199,7 +213,7 @@ header nav ul li:first-child {
   overflow: hidden;
 }
 .slidecontainer {
-  width: 300%; /* js 부모 너비파악, 슬라이드 개수 파악, 너비 계산해서 지정할 예정 */
+  width: 300%; /* js 부모 너비파악, 슬라이드 개수 파악, 너비 계산 지정할 예정 */
   display: flex;
   transition: 0.3s ease-out;
 }
@@ -236,5 +250,7 @@ header nav ul li:first-child {
 /* CTA */
 .cta {
   background: var(--c-t-a);
+}
+.cta h3 {
   color: var(--white);
 }

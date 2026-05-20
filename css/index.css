@@ -6,14 +6,12 @@
   gap: 24px;
   text-align: center;
 }
-
 .features ul li {
   display: flex;
   flex-direction: column;
   gap: var(--base-unit);
   align-items: center;
 }
-
 .features .icon {
   width: calc(var(--base-unit) * 4);
   height: calc(var(--base-unit) * 4);
@@ -28,7 +26,6 @@
 .features .icon span {
   font-size: 36px;
 }
-
 .testimonial li {
   font-weight: 300;
   color: var(--light-blue);
@@ -41,5 +38,6 @@
   line-height: 36px;
 }
 .testimonial small {
+  font-weight: 300;
   text-transform: uppercase;
 }
