@@ -14,7 +14,7 @@ form.addEventListener("submit", e => {
       input.focus();
       let pos = input.parentElement.offsetTop;
       let msg = `${input.getAttribute("id")}은 필수야~`;
-      openfeedback(pos, msg);
+      openFeedback(pos, msg);
       return;
     } else {
       ++completed;
@@ -34,11 +34,11 @@ form.addEventListener("submit", e => {
   console.log(completed);
 });
 
-function openfeedback(pos, msg) {
+function openFeedback(pos, msg) {
   feedback.style.top = `${pos}px`;
   feedback.innerHTML = `<p>${msg}</p>`;
   feedback.style.visibility = "visible";
 }
-function closeFeedback(pos, msg) {
+function closeFeedback() {
   feedback.style.visibility = "hidden";
 }
